@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> To Do list </title>
-	<link rel="stylesheet" type="text/css" href="To-do list.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro To‑Do</title>
+  <link rel="stylesheet" href="To-do list.css" />
 </head>
 <body>
 
-	<div class="container">
-		<div class="todo">
-			<h2> To Do List <img src="C:\Users\ansh4\OneDrive\Documents\Web Dev\Project 1 To-do List\97858292-bb71-42fc-92d7-febdd37ee6e7.jpg"></h2>
-			<div class="row">
-				<input type="text" id="input-box" placeholder="Title...">
-				<button onclick="AddTask()"> ADD </button>
-			</div>
-			<ul id="list-container">
-						
-			</ul>
-		</div>
-	</div>
+  <div class="background"></div>
+
+  <main class="app">
+  <header class="header">
+  <div class="title-row">
+    <h1>My Tasks</h1>
+    <img src="./Tasks.jpg" alt="Tasks Icon" class="task-icon" />
+  </div>
+  <p>Stay productive. Stay focused.</p>
+</header>
+
+
+    <section class="input-section">
+      <form id="task-form">
+        <input id="task-input" type="text" placeholder="Add a new task…" />
+        <select id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <button>Add</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="active">Active</button>
+          <button data-filter="completed">Completed</button>
+        </div>
+        <div class="stats">
+          <span id="count">0 tasks</span>
+          <button id="clear" class="ghost">Clear Completed</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="list-section">
+      <ul id="task-list"></ul>
+      <p class="empty">No tasks yet ✨</p>
+    </section>
+
+    <footer>Built with ❤️</footer>
+  </main>
 
 <script src="To-do list.js"></script>
 </body>
